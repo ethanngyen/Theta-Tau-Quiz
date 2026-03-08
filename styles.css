@@ -1,7 +1,3 @@
-
-.hidden {
-  display: none;
-}
 /* --- Theme + base --- */
 :root {
   --bg0: #140101;
@@ -28,48 +24,34 @@
 * {
   box-sizing: border-box;
 }
-html,
-body {
-  height: 100%;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: #140101; /* fallback so overscroll never shows white */
 }
 
-body {
-  font-family:
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    Segoe UI,
-    Roboto,
-    Arial,
-    "Noto Sans",
-    "Helvetica Neue",
-    sans-serif;
-  margin: 0;
-  color: var(--text);
-
-  /* Seamless layered background */
+html{
   background:
-    radial-gradient(
-      1200px 800px at 12% 0%,
-      rgba(214, 178, 94, 0.14),
-      transparent 60%
-    ),
-    radial-gradient(
-      900px 700px at 100% 18%,
-      rgba(178, 31, 45, 0.18),
-      transparent 62%
-    ),
-    radial-gradient(
-      1000px 900px at 50% 110%,
-      rgba(255, 236, 236, 0.05),
-      transparent 65%
-    ),
-    linear-gradient(180deg, var(--bg0), var(--bg1));
+    radial-gradient(1200px 800px at 12% 0%, rgba(214,178,94,.14), transparent 60%),
+    radial-gradient(900px 700px at 100% 18%, rgba(178,31,45,.18), transparent 62%),
+    radial-gradient(1000px 900px at 50% 110%, rgba(255,236,236,.05), transparent 65%),
+    linear-gradient(180deg, #140101, #1b0404);
   background-attachment: fixed;
 }
 
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    "Noto Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  color: var(--text);
+  background: transparent; /* IMPORTANT */
+  overscroll-behavior: none; /* reduces rubber-band artifacts */
+}
+
 /* optional subtle grain to hide any remaining banding */
-body::before {
+html::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -281,6 +263,12 @@ button:hover {
   margin-top: 10px;
 }
 
+.hidden {
+  display: none;
+}
+
+.wrap { position: relative; z-index: 1; }
+
 /* --- Mobile tweaks --- */
 @media (max-width: 520px) {
   .wrap {
@@ -297,3 +285,4 @@ button:hover {
     align-items: flex-start;
   }
 }
+
