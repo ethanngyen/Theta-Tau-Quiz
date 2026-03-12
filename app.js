@@ -231,8 +231,8 @@ const questions = [
   {
     id: "ChapterExecutiveCouncil2",
     q: "Name at least one of his duties:",
-    a: "Preside over all meetings, initiate new members, appoint committees",
-    mode: "contains",
+    a: "preside over all meetings | initiate new members | appoint committees",
+    mode: "multi",
   },
   {
     id: "ChapterExecutiveCouncil3",
@@ -243,8 +243,8 @@ const questions = [
   {
     id: "ChapterExecutiveCouncil4",
     q: "Name at least one of his duties:",
-    a: "Preside over meetings in absence of the regent, oversee committees, maintain room reservations, is property manager",
-    mode: "contains",
+    a: "preside over meetings in absence of the regent | oversee committees | maintain room reservations | is property manager",
+    mode: "multi",
   },
   {
     id: "ChapterExecutiveCouncil5",
@@ -255,8 +255,8 @@ const questions = [
   {
     id: "ChapterExecutiveCouncil6",
     q: "Name at least one of his duties:",
-    a: "Record minutes at all meetings, register all visitors, correspondent to the Grand Executive Council",
-    mode: "contains",
+    a: "record minutes at all meetings | register all visitors | correspondent to the Grand Executive Council",
+    mode: "multi",
   },
   {
     id: "ChapterExecutiveCouncil7",
@@ -267,8 +267,8 @@ const questions = [
   {
     id: "ChapterExecutiveCouncil8",
     q: "Name at least one of her duties:",
-    a: "Collect dues and fees, maintain chapter financial records",
-    mode: "contains",
+    a: "collect dues and fees | maintain chapter financial records",
+    mode: "multi",
   },
   {
     id: "ChapterExecutiveCouncil9",
@@ -279,8 +279,8 @@ const questions = [
   {
     id: "ChapterExecutiveCouncil10",
     q: "Name at least one of his duties:",
-    a: "Chapter correspondent to The Gear, maintain alumni records, author of chapter newsletter",
-    mode: "contains",
+    a: "chapter correspondent to The Gear | maintain alumni records | author of chapter newsletter",
+    mode: "multi",
   },
   {
     id: "ChapterExecutiveCouncil11",
@@ -289,10 +289,10 @@ const questions = [
     mode: "exact",
   },
   {
-    id: "ChapterExecutiveCouncil12",
+    id: "ChaptercontainsExecutiveCouncil12",
     q: "Name at least one of his duties:",
-    a: "Aid and advise the E-Council, maintain parliamentary procedure, ensure quorum at meetings",
-    mode: "contains",
+    a: "aid and advise the E-Council | maintain parliamentary procedure | ensure quorum at meetings",
+    mode: "multi",
   },
   //Grand Executive Council
   {
@@ -340,14 +340,14 @@ const questions = [
   {
     id: "GrandExecutiveCouncil8",
     q: "Who's the National Delegate?",
-    a: "Kaitlynn Rahn, Keegan Dykstra",
+    a: "Kaitlynn Rahn | Keegan Dykstra",
     mode: "contains",
   },
   {
     id: "GrandExecutiveCouncil9",
     q: "Who's the other National Delegate?",
-    a: "Keegan Dykstra, Kaitlynn Rahn",
-    mode: "contains",
+    a: "Keegan Dykstra | Kaitlynn Rahn",
+    mode: "multi",
   },
 
   // Add more: { id:"x", q:"Question", a:"Answer", mode:"exact" }
